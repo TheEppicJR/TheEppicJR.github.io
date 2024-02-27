@@ -17,7 +17,7 @@ Additionally the existing shackle keys have a steep enough angle that they have 
 <br>
 Then there were three other objectives partly at odds with each other, first it should be machinable in two setups on a 3 axis mill, second it should be pointy enough to be used as a marlin spike, and third it <b>NEEDS</b> to look cool.
 <br>
-What became immediately apparent is that there needed to be a flat outer facet as opposed to the C2 continuity full rounded edge style that everyone typically goes for. [Good introduction on the kinds of continuity here.] (https://www.core77.com/posts/12752/a-periodic-table-of-form-the-secret-language-of-surface-and-meaning-in-product-design-by-gray-holland-12752)  By having flat facets you solve a number of problems in one go, you get a much larger engagement face than having a radiused tip, you gain a reasonable amount of AMoI in the narrow sides, and it becomes easy to hold in soft jaws. And thus we get the revision I have already shown.
+What became immediately apparent is that there needed to be a flat outer facet as opposed to the C2 continuity full rounded edge style that everyone typically goes for. [Good introduction on the kinds of continuity here.](https://www.core77.com/posts/12752/a-periodic-table-of-form-the-secret-language-of-surface-and-meaning-in-product-design-by-gray-holland-12752)  By having flat facets you solve a number of problems in one go, you get a much larger engagement face than having a radiused tip, you gain a reasonable amount of AMoI in the narrow sides, and it becomes easy to hold in soft jaws. And thus we get the revision I have already shown.
 <br>
 {% include obj_viewer.html file_name="/assets/bottle_opener/OpenFid_3" %}
 <br>
