@@ -1,0 +1,14 @@
+// A centering style
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// A style for images that centers them and adds a 15px radius to the corners
+.rounded-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+}

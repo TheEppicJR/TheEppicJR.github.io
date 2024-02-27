@@ -1,0 +1,113 @@
+<script type="importmap">
+    {
+      "imports": {
+        "three": "{{ site.url }}/assets/js/three.module.js",
+        "three/addons/": "{{ site.url }}/assets/js/jsm/"
+      }
+    }
+</script>
+<meta name="viewport" content="width=device-width/2, user-scalable=yes, minimum-scale=0.5, maximum-scale=1.0">
+<div style="text-align: center;">
+
+    <canvas id="glcanvas{{ include.file_name }}"></canvas>
+
+    <script type="module">
+
+        import * as THREE from 'three';
+
+        import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+        import { MTLLoader } from 'three/addons/loaders/MTLLoader.js';
+
+        let camera, scene, renderer, canvas;
+
+                init();
+                animate();
+
+
+                function init() {
+
+                    camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 40 );
+                    camera.position.z = 2.5;
+
+                    // scene
+
+                    scene = new THREE.Scene();
+
+                    const ambientLight = new THREE.AmbientLight( 0xffffff );
+                    scene.add( ambientLight );
+
+                    const pointLight = new THREE.PointLight( 0xffffff, 2 );
+                    camera.add( pointLight );
+                    scene.add( camera );
+
+                    scene.background = new THREE.Color( 0xfdfdfd );
+
+                    // model
+
+                    const onProgress = function ( xhr ) {
+
+                        if ( xhr.lengthComputable ) {
+
+                            const percentComplete = xhr.loaded / xhr.total * 100;
+                            console.log( percentComplete.toFixed( 2 ) + '% downloaded' );
+
+                        }
+
+                    };
+
+                    new MTLLoader()
+                        .load( '{{ site.url }}{{ include.file_name }}.mtl', function ( materials ) {
+
+                            materials.preload();
+
+                            new OBJLoader()
+                                .setMaterials( materials )
+                                .load( '{{ site.url }}{{ include.file_name }}.obj', function ( object ) {
+
+                                    object.scale.setScalar( 0.1 );
+                                    scene.add( object );
+
+                                }, onProgress );
+
+                        } );
+
+                    //
+                    canvas = document.getElementById("glcanvas{{ include.file_name }}");
+                    renderer = new THREE.WebGLRenderer({canvas: canvas,  antialias: true });
+                    renderer.setPixelRatio( window.devicePixelRatio );
+                    renderer.setSize( window.innerWidth/2, window.innerHeight/2 );
+                    // document.body.appendChild( renderer.domElement );
+
+                    //
+
+                    const controls = new  OrbitControls( camera, renderer.domElement );
+                    controls.minDistance = 0.5;
+                    controls.maxDistance = 20;
+
+                    //
+
+                    window.addEventListener( 'resize', onWindowResize );
+
+                }
+
+                function onWindowResize() {
+
+                    camera.aspect = window.innerWidth / window.innerHeight;
+                    camera.updateProjectionMatrix();
+
+                    renderer.setSize( window.innerWidth/2, window.innerHeight/2 );
+
+                }
+
+                //
+
+                function animate() {
+
+                    requestAnimationFrame( animate );
+                    renderer.render( scene, camera );
+
+                }
+    </script>
+
+</div>
