@@ -36,10 +36,12 @@
                     scene = new THREE.Scene();
 
                     const ambientLight = new THREE.AmbientLight( 0xffffff );
-                    scene.add( ambientLight );
+                    // scene.add( ambientLight );
 
-                    const pointLight = new THREE.PointLight( 0xffffff, 2 );
-                    camera.add( pointLight );
+                    const pointLight = new THREE.PointLight( 0xffffff, 4 );
+                    pointLight.castShadow = true;
+                    pointLight.position.set( 2, 0, 0 );
+                    scene.add( pointLight );
                     scene.add( camera );
 
                     scene.background = new THREE.Color( 0xfdfdfd );
