@@ -2,7 +2,7 @@
 layout: post
 title:  "Virtual Linkage Arm"
 date:   2024-02-26 23:26:53 -0800
-categories: jekyll update
+categories: meche
 ---
 
 <img src="/assets/virtual_linkage/vl_16.jpeg" width = 400 class="rounded-image">

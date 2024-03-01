@@ -2,7 +2,7 @@
 layout: post
 title:  "Gyro Demo Part"
 date:   2024-02-27 11:05:20 -0800
-categories: jekyll update
+categories: design
 ---
 <img src="/assets/gyro_demo/gyro_01.png" width = 400 class="rounded-image">
 <br>

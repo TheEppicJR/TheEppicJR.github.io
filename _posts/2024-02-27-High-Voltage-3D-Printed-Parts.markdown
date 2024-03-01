@@ -2,7 +2,7 @@
 layout: post
 title:  "High Voltage 3D Printed Parts"
 date:   2024-02-27 17:11:11 -0800
-categories: jekyll update
+categories: design meche 3dp
 ---
 
 <img src="/assets/hv_3dp/hv_01.jpeg" width = 600 class="rounded-image">

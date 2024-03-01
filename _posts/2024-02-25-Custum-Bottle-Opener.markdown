@@ -2,7 +2,7 @@
 layout: post
 title:  "Custom Bottle Opener"
 date:   2024-02-25 20:59:52 -0800
-categories: jekyll update
+categories: design
 ---
 <img src="/assets/bottle_opener/bo_6.jpeg" width = 400 class="rounded-image">
 <br>

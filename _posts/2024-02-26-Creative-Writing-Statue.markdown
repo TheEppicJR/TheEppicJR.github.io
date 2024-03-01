@@ -2,7 +2,7 @@
 layout: post
 title:  "Creative Writing Statue"
 date:   2024-02-26 22:29:33 -0800
-categories: jekyll update
+categories: design
 ---
 <img src="/assets/english_project/ep_2.jpg" width = 600 class="rounded-image">
 <br>
